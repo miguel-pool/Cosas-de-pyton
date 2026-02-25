@@ -12,9 +12,9 @@ while True:    #El programa se ejecutara para siempre hasta que
     
     tiempos_vuelta.append(tiempo_realizado) #Guardamos el tiempo ingresado a nuestra lista
     
-    
-if tiempos_vuelta == 0:
+if len(tiempos_vuelta) == 0:
     print("No se registro ningun tiempo")
+    
 else:
     tiempo_pista = 0
     vueltas = 0
@@ -25,16 +25,14 @@ else:
         
         tiempo_pista += tiempo_actual #Sumamos los segundos para poder obtener el total
         vueltas += 1 #Usamos un contador(bandera) para sacar el promedio de vuelta
-        
-        if vueltas <= 0:
-            print("No se puede dividir entre 0")
     
         if tiempo_actual < vuelta_rapida:
             vuelta_rapida = tiempo_actual
-        else:
+            
+        if tiempo_actual > vuelta_lenta:
             vuelta_lenta = tiempo_actual
         
-        promedio_vuelta = tiempo_pista / vueltas #Se saca el promedio de vuelta
+    promedio_vuelta = tiempo_pista / vueltas #Se saca el promedio de vuelta
     print("\n")
     print("-------------------------------")
     print(f"Se completaron {vueltas} vueltas")
