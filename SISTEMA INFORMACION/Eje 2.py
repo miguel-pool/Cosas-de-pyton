@@ -4,7 +4,7 @@ print("Que deseas hacer?")
 print("1.-Velocidad")
 print("2.-Distancia")
 print("3.-Tiempo")
-opcion = int(input("Selcciona una opcion"))
+opcion = int(input("Selcciona una opcion: "))
 
 distancia =int(input("Inserta distancia: "))
 tiempo =int(input("Inserta el tiempo: "))
